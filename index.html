@@ -1,0 +1,36 @@
+ 
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <title>KULKER :: HTML 5 Game - Backgammon</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+
+    <script src="js/jquery-1.7.1.min.js"></script>
+</head>
+<body onmousedown="return false;" onload="init()">
+<input type="button" value="New Game" onclick="BGHUserPiece = 'p';
+                newGame();toggleUserOrder()" />	&nbsp; &nbsp; 
+<input type="button" value="New Game (other)" onclick="BGHUserPiece = 's';
+                newGame();toggleUserOrder()" />	&nbsp; &nbsp; 
+<!--<input type="button" value="Sonraki Oyuncuya Geç" onclick="toggleUserOrder()" />-->
+<input type="button" value="Undo" onclick="undoMovie()" />	
+ 
+<br /> Next User (color): <input type=text readonly size=4 id='userOrderInfo' /> 
+ 
+|&nbsp;&nbsp;<input type="button" value="Roll Dice" onclick="rollDice()" />	 
+
+<input type="button" value="Hide Dice" onclick="diceLayer.hide()" />	
+
+<div id="container"></div>
+<script src="js/kinetic-v5.1.0.min.js"></script> 
+<script src="js/bgammon.js" defer="defer"></script>
+</body>
+</html>
